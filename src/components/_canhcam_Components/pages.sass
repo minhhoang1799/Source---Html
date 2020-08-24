@@ -1,0 +1,28 @@
+.modulepager
+    .pagination
+        margin-top: -10px
+        margin-bottom: 40px
+        display: flex
+        list-style-type: none
+        justify-content: center
+        li
+            margin: 0 5px
+            color: #999999
+            &:last-child
+                margin-right: 0
+            a, span
+                width: 30px
+                height: 30px
+                border: 1px solid #e1e1e1
+                font-size: 16px
+                color: #999999
+                display: flex
+                justify-content: center
+                background: #ffffff
+                align-items: center
+                transition: .4s ease-in-out all
+            &.active, &:hover
+                a, span
+                    color: #fffefe
+                    background: #f47522
+                    border: 1px solid #f47522
