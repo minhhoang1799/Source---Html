@@ -103,9 +103,9 @@ $(document).ready(function () {
 		backToTop();
 	}
 	$(".subject").append($('.breadcrumb li a').eq(1).find('span').html());
-	$( "#productTabs" ).tabs({
-		event: "mouseover"
-	})
+	// $("#productTabs").tabs({
+	// 	event: "mouseover"
+	// })
 });
 
 function VienSoiResponsive() {

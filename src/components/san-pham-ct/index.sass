@@ -1,0 +1,129 @@
+.the-workshop-product-2
+	padding: 30px 0
+	@media(min-width: 1024px)
+		padding: 40px 0 
+	@media(min-width: 1200px)
+		padding: 60px 0
+	.image-top
+		+img-scale(210/285*100%)
+	.list-product
+		max-height: 1000px
+		overflow-y: auto 
+		padding-right: 20px
+		padding-left: 20px
+		&::-webkit-scrollbar
+			width: 4px
+		/* Track */
+		&::-webkit-scrollbar-track
+			background: #f0f0f0 
+		/* Handle */
+		&::-webkit-scrollbar-thumb
+			background: #00713d
+		/* Handle on hover */
+		&::-webkit-scrollbar-thumb:hover
+			background: #00713d 
+		.product-item
+			padding: 25px 0
+			text-align: center
+			+ .product-item
+				border-top: 1px solid #e0e0e0
+			.name 
+				// display: flex
+				// justify-content: center
+				// align-items: center
+				a 
+					font-size: 24px
+					font-weight: 700
+					color: #333333
+					text-align: center
+	.main-product-top
+		.image-product
+			display: flex
+			justify-content: center
+			align-items: center
+			width: 100%
+			height: 300px
+			@media(min-width: 1024px)
+				height: 400px
+			@media(min-width: 1200px)
+				height: 430px
+			img 
+				max-width: 100%
+				max-height: 100%
+		.box-content
+			.name 
+				font-size: 24px
+				font-weight: 700
+				color: #333333
+				@media(min-width: 1024px)
+					font-size: 28px
+				@media(min-width: 1200px)
+					font-size: 30px
+			.brief-content
+				margin-top: 15px
+				> * 
+					font-size: 16px
+					font-weight: 400
+					color: #333333
+				* + * 
+					margin-top: 10px
+	.main-product-bottom
+		margin-top: 20px
+		.tabslet-tab
+			display: flex
+			justify-content: flex-start
+			flex-wrap: wrap 
+			align-items: center
+			border-bottom: 2px solid #00713d
+			li 
+				display: flex
+				justify-content: center
+				align-items: center
+				a 
+					display: flex
+					justify-content: center
+					align-items: center
+					padding: 5px 25px
+					background: #ffffff
+					border-top-left-radius: 10px
+					border-top-right-radius: 10px
+					font-size: 16px
+					font-weight: 500
+					color: #333333
+					text-decoration: none
+					&:hover 
+						text-decoration: none
+				&.active
+					a 
+						background: #00713d
+						color: #ffffff
+		.tabslet-content
+			border: 1px solid #eeeeee
+			padding: 15px
+			border-bottom-left-radius: 10px
+			border-bottom-right-radius: 10px
+			.full-content
+				max-height: 600px
+				overflow: hidden
+				> * 
+					font-size: 16px
+					font-weight: 400
+					color: #333333
+				* + * 
+					margin-top: 20px
+				&.active
+					max-height: 100%
+			.view-more
+				display: flex
+				justify-content: center
+				align-items: center
+				margin-top: 20px
+				a 
+					display: flex
+					justify-content: center
+					align-items: center
+					font-size: 16px
+					font-weight: 400
+					color: #00713d
+			@media(min-width: 1024px)
+				padding: 20px

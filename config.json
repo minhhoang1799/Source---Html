@@ -1,18 +1,19 @@
 {
-    "font": [
-        "bower_components/mdi/fonts/**",
-        "bower_components/font-awesome/webfonts/**",
-        "bower_components/linearicons/dist/web-font/fonts/**",
-        "bower_components/material-design-icons/iconfont/**",
-        "node_modules/remixicon/fonts/**",
-        "src/fonts/**"
-    ],
-    "js": [
+	"font": [
+		"bower_components/mdi/fonts/**",
+		"bower_components/font-awesome/webfonts/**",
+		"bower_components/linearicons/dist/web-font/fonts/**",
+		"bower_components/material-design-icons/iconfont/**",
+		"node_modules/remixicon/fonts/**",
+		"src/fonts/**"
+	],
+	"js": [
 		"src/_plugins/_core-js/core.js",
-		"src/_plugins/_core-js/main.js"
-    ],
-    "css": [
-        "src/_plugins/_core-css/core.css",
-        "src/_plugins/_core-css/main.css"
-    ]
+		"src/_plugins/_core-js/main.js",
+		"src/_plugins/_core-js/Tabslet.js"
+	],
+	"css": [
+		"src/_plugins/_core-css/core.css",
+		"src/_plugins/_core-css/main.css"
+	]
 }

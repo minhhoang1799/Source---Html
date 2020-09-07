@@ -1,0 +1,62 @@
+section.the-workshop-product-2.main-section
+	.container
+		.row
+			.col-lg-5.col-xl-4
+				.image-top
+					img(src="./img/1.png", alt="")
+				.list-product
+					- for (i=1; i<10; i++)
+						.product-item
+							.name 
+								a(href="#") My bed 1
+							.image
+								a(href="#")
+									img(src="./img/3.png", alt="")
+							.see-detail
+								a(href="#") See details
+			.col-lg-7.col-xl-8
+				.main-product-top
+					.row
+						.col-lg-7
+							.image-product
+								img(src="./img/3.png", alt="")
+						.col-lg-5
+							.box-content
+								h1.name Ghế ăn mây - da nâu
+								.brief-content
+									p 
+										strong Mã sản phẩm: 
+										| 3*96231
+									p 
+										strong Kích thước: 
+										| 510-520-530
+									p 
+										strong Vật liệu: 
+									p Gỗ trần bì
+				.main-product-bottom
+					.tabslet(data-toggle="tabslet")
+						ul.tabslet-tab
+							li.active
+								a(href="#tab-1")  Mô tả chi tiết
+							li
+								a(href="#tab-2") Bộ sưu tập
+							li
+								a(href="#tab-3") Lựa chọn khác
+						.tabslet-content.active(id="tab-1")
+							.full-content
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit facilis esse, tempore distinctio, minus voluptate nostrum quas commodi autem ad libero, eum nam inventore. Vitae, dolor iusto? Facilis, repellendus nihil!
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit facilis esse, tempore distinctio, minus voluptate nostrum quas commodi autem ad libero, eum nam inventore. Vitae, dolor iusto? Facilis, repellendus nihil!
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit facilis esse, tempore distinctio, minus voluptate nostrum quas commodi autem ad libero, eum nam inventore. Vitae, dolor iusto? Facilis, repellendus nihil!
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit facilis esse, tempore distinctio, minus voluptate nostrum quas commodi autem ad libero, eum nam inventore. Vitae, dolor iusto? Facilis, repellendus nihil!
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit facilis esse, tempore distinctio, minus voluptate nostrum quas commodi autem ad libero, eum nam inventore. Vitae, dolor iusto? Facilis, repellendus nihil!
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit facilis esse, tempore distinctio, minus voluptate nostrum quas commodi autem ad libero, eum nam inventore. Vitae, dolor iusto? Facilis, repellendus nihil!
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit facilis esse, tempore distinctio, minus voluptate nostrum quas commodi autem ad libero, eum nam inventore. Vitae, dolor iusto? Facilis, repellendus nihil!
+							.view-more
+								a(href="javascript:void(0)") Xem thêm
+						.tabslet-content(id="tab-2")
+							.full-content
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit facilis esse, tempore distinctio, minus voluptate nostrum quas commodi autem ad libero, eum nam inventore. Vitae, dolor iusto? Facilis, repellendus nihil!
+						.tabslet-content(id="tab-3")
+							.full-content
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit facilis esse, tempore distinctio, minus voluptate nostrum quas commodi autem ad libero, eum nam inventore. Vitae, dolor iusto? Facilis, repellendus nihil!
+#productTabs
