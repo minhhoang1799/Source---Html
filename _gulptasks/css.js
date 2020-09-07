@@ -14,7 +14,7 @@ export const sassTask = () => {
 		"src/components/**/**.sass",
 	])
 		.pipe(sourcemap.init())
-		.pipe(concat("main.min.sass"))
+		.pipe(concat("upgrade.min.sass"))
 		.pipe(sass().on("error", sass.logError))
 		.pipe(postcss([
 			autoprefixer({

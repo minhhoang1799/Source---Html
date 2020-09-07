@@ -13,7 +13,7 @@ export const jsTask = () => {
 			presets: ["@babel/preset-env"]
 		}))
 		.pipe(uglifyBabel())
-		.pipe(rename("main.min.js"))
+		.pipe(rename("upgrade.min.js"))
 		.pipe(sourcemap.write("."))
 		.pipe(dest("dist/js"))
 }

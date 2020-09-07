@@ -2,7 +2,7 @@
 	"name": "gulp-html",
 	"description": "transpile pug, sass, js(es6) => html, css(w/ added prefix, auto-sorted css, minified), js(babeled, minified)",
 	"main": "gulpfile.babel.js",
-	"version": "3.2.3",
+	"version": "4.0.0",
 	"repository": "https://github.com/voducmanh99/MySource.git",
 	"private": false,
 	"author": "voducmanh99",
@@ -22,7 +22,7 @@
 		"aos": "^2.3.4",
 		"autoprefixer": "9.4.3",
 		"bower": "^1.8.8",
-		"browser-sync": "2.26.7",
+		"browser-sync": "^2.26.12",
 		"cropperjs": "^1.5.7",
 		"css-declaration-sorter": "4.0.1",
 		"cssnano": "4.1.8",
@@ -41,7 +41,7 @@
 		"gulp-typescript": "^5.0.1",
 		"gulp-uglify": "3.0.2",
 		"remixicon": "^2.5.0",
-		"swiper": "^6.0.2",
+		"swiper": "^6.1.2",
 		"vendors": "^1.0.4"
 	}
 }
