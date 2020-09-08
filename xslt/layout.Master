@@ -1,0 +1,226 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="~/App_MasterPages/layout.Master.cs" Inherits="CanhCam.Web.layout" %>
+
+<!DOCTYPE html>
+<html id="Html1" runat="server">
+
+<head id="Head1" runat="server">
+	<title></title>
+
+	<portal:MetaContent ID="MetaContent" runat="server" />
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<portal:favicon id="Favicon1" runat="server" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+
+	<portal:ScriptLoader ID="ScriptLoader1" runat="server" IncludejQueryUICore="true" IncludeFancyBox="false" />
+	<portal:StyleSheetCombiner ID="StyleSheetCombiner" runat="server" IncludejQueryUI="false"
+		JQueryUIThemeName="smoothness" />
+
+	<portal:googleanalyticsscript id="GoogleAnalyticsScript1" runat="server" />
+
+	<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800&amp;subset=vietnamese"
+		rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+</head>
+
+<body id="Body" runat="server" class="canhcam">
+	<portal:facebooksdk id="fbsdk" runat="server" />
+	<portal:layoutdisplaysettings id="LayoutDisplaySettings1" runat="server" />
+	<form id="frmMain" runat="server">
+		<asp:SiteMapDataSource ID="SiteMapData" runat="server" ShowStartingNode="false" />
+		<asp:SiteMapDataSource ID="PageMapDataSource" runat="server" ShowStartingNode="false" />
+		<asp:SiteMapDataSource ID="ChildPageSiteMapData" runat="server" ShowStartingNode="false" />
+		<asp:ScriptManager ID="ScriptManager1" EnablePageMethods="true" runat="server" />
+		<%--<portal:ModuleWrapper ID="mdl136" runat="server" ConfigureModuleId="136" />--%>
+		<div id="wrapper">
+
+			<header class="pos-f-t offcanvas no-tranparent">
+				<div class="topbar">
+					<div class="container">
+						<portal:modulewrapper id="mdl135" runat="server" configuremoduleid="135" />
+						<div class="row">
+							<div class="col text-center text-md-right">
+								<ul class="list-inline">
+									<li class="list-inline-item">
+										<portal:modulewrapper id="mdl206" runat="server" configuremoduleid="206" />
+									</li>
+									<li class="list-inline-item">
+										<portal:modulewrapper id="mdl136" runat="server" configuremoduleid="136" />
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="container">
+					<div class="mainmenu clearfix">
+						<button class="navbar-toggler navbar-toggler-right offcanvas-toggle hidden-md-up" type="button"
+							data-toggle="offcanvas" data-target="#VienSoiGlobalMenu"><i class="fa fa-bars"></i></button>
+						<portal:modulewrapper id="mdl207" runat="server" configuremoduleid="207" />
+					</div>
+					<nav class="navbar navbar-light bg-faded navbar-offcanvas navbar-offcanvas-touch navbar-toggleable-sm"
+						id="VienSoiGlobalMenu" role="navigation">
+						<span class="mr-auto">
+							<portal:modulewrapper id="mdl250" runat="server" configuremoduleid="250" />
+						</span>
+						<portal:modulewrapper id="mdl42" runat="server" configuremoduleid="42" />
+						<div class="nav-item justify-content-center d-flex" id="searchbox">
+							<div class="form-inline">
+								<portal:modulewrapper id="mdl137" runat="server" configuremoduleid="137" />
+								<button class="se btn hidden-sm-down" type="button"><i
+										class="fa fa-close text-danger cl"></i><i class="fa fa-search go"></i></button>
+							</div>
+						</div>
+					</nav>
+				</div>
+			</header>
+			<asp:Panel ID="divAlt1" runat="server" CssClass="altcontent1">
+				<asp:ContentPlaceHolder ID="altContent1" runat="server">
+				</asp:ContentPlaceHolder>
+			</asp:Panel>
+
+			<main>
+				<asp:Panel ID="divLeft" runat="server" CssClass="leftside" Visible="True" SkinID="pnlPlain">
+					<asp:ContentPlaceHolder ID="leftContent" runat="server">
+					</asp:ContentPlaceHolder>
+				</asp:Panel>
+				<asp:Panel ID="divCenter" runat="server" Visible="True" CssClass="center-rightandleftmargins"
+					SkinID="pnlPlain">
+					<asp:ContentPlaceHolder ID="mainContent" runat="server">
+					</asp:ContentPlaceHolder>
+				</asp:Panel>
+				<asp:Panel ID="divRight" runat="server" Visible="True" CssClass="rightside" SkinID="pnlPlain">
+					<asp:ContentPlaceHolder ID="rightContent" runat="server">
+					</asp:ContentPlaceHolder>
+				</asp:Panel>
+			</main>
+			<asp:Panel ID="divAltContent2" runat="server" CssClass="altcontent2">
+				<asp:ContentPlaceHolder ID="altContent2" runat="server"></asp:ContentPlaceHolder>
+			</asp:Panel>
+
+			<footer class="footer">
+				<div class="container">
+					<div class="row">
+						<div class="col linkfooter">
+							<div class="row">
+								<div class="col-md-4 col-lg-3">
+									<portal:modulewrapper id="mdl209" runat="server" configuremoduleid="209" />
+									<portal:modulewrapper id="mdl215" runat="server" configuremoduleid="215" />
+								</div>
+								<div class="col-md-4 col-lg-3">
+									<portal:modulewrapper id="mdl211" runat="server" configuremoduleid="211" />
+								</div>
+								<div class="col-md-4 col-lg-3">
+									<portal:modulewrapper id="mdl212" runat="server" configuremoduleid="212" />
+								</div>
+								<div class="col-md-12 col-lg-3 social">
+									<portal:modulewrapper id="mdl213" runat="server" configuremoduleid="213" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col copyright text-center">
+							<portal:modulewrapper id="mdl214" runat="server" configuremoduleid="214" />
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+		<%--<portal:copyrightlabel id="cl1" runat="server" showyear="true" beginyear="2017" />--%>
+		<portal:autohidepanel id="ah1" cssclass="cmsadminpanel" runat="server">
+			<div class="row">
+				<div class="col-lg-12">
+					<nav>
+						<ul class="nav navbar-nav listmenu">
+							<portal:AdminMenuLink ID="lnkDashboard" IconCssClass="fa fa-key" RenderAsListItem="true"
+								runat="server" />
+							<portal:FileManagerLink ID="lnkFileManager" IconCssClass="fa fa-folder-open"
+								RenderAsListItem="true" runat="server" />
+							<portal:PageEditFeaturesLink ID="lnkPageContent" IconCssClass="fa fa-cog"
+								RenderAsListItem="true" runat="server" />
+							<portal:PageEditSettingsLink ID="lnkPageSettings" IconCssClass="fa fa-edit"
+								RenderAsListItem="true" runat="server" />
+							<portal:NewZoneLink ID="lnkNewZone" IconCssClass="fa fa-file" RenderAsListItem="true"
+								runat="server" />
+							<portal:ZoneEditSettingsLink ID="lnkZoneSettings" IconCssClass="fa fa-edit"
+								RenderAsListItem="true" runat="server" />
+							<li>
+								<div class="form-inline">
+									<div class="form-group">
+										<label class="sr-only">Mode</label>
+									</div>
+									<div class="form-group">
+										<asp:ContentPlaceHolder ID="pageEditContent" runat="server">
+										</asp:ContentPlaceHolder>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<ul class="nav">
+							<li><a href="#" id="pullmenucms"><i class="fa fa-chevron-circle-right"></i></a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+			<script type="text/javascript">
+				$(document).ready(function () {
+					$("#pullmenucms").click(function (e) {
+						e.preventDefault();
+						if ($(this).parents('.cmsadminpanel').hasClass('toggled')) {
+							ShowToolbar();
+							Set_Cookie('toolbarOpenState', 'open');
+						} else {
+							HideToolbar();
+							Set_Cookie('toolbarOpenState', 'closed');
+						}
+					});
+					var openState = Get_Cookie('toolbarOpenState');
+					if (openState != null) {
+						if (openState == 'closed') {
+							HideToolbar();
+						}
+						if (openState == 'open') {
+							ShowToolbar();
+						}
+					}
+				});
+
+				function HideToolbar() {
+					$('.cmsadminpanel').addClass("toggled");
+					$('.fa-chevron-circle-right').addClass('fa-rotate-180');
+				}
+
+				function ShowToolbar() {
+					$('.cmsadminpanel').removeClass("toggled");
+					$('.fa-chevron-circle-right').removeClass('fa-rotate-180');
+				}
+			</script>
+		</portal:autohidepanel>
+		<portal:woopra id="woopra11" runat="server" />
+	</form>
+	<script src="/Data/Sites/1/skins/default/js/core.min.js"></script>
+	<script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="/Data/Sites/1/skins/default/js/app.js"></script>
+</body>
+<script type="text/javascript">
+	_linkedin_partner_id = "955659";
+	window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+	window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+</script>
+<script type="text/javascript">
+	(function () {
+		var s = document.getElementsByTagName("script")[0];
+		var b = document.createElement("script");
+		b.type = "text/javascript";
+		b.async = true;
+		b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+		s.parentNode.insertBefore(b, s);
+	})();
+</script>
+<noscript> <img height="1" width="1" style="display:none;" alt=""
+		src="https://px.ads.linkedin.com/collect/?pid=955659&fmt=gif" /> </noscript>
+</html>
