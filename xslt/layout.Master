@@ -198,18 +198,21 @@
 					$('.cmsadminpanel').removeClass("toggled");
 					$('.fa-chevron-circle-right').removeClass('fa-rotate-180');
 				}
+
 			</script>
 		</portal:autohidepanel>
 		<portal:woopra id="woopra11" runat="server" />
 	</form>
 	<script src="/Data/Sites/1/skins/default/js/core.min.js"></script>
 	<script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="/Data/Sites/1/skins/default/js/upgrade.min.js"></script>
 	<script src="/Data/Sites/1/skins/default/js/app.js"></script>
 </body>
 <script type="text/javascript">
 	_linkedin_partner_id = "955659";
 	window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
 	window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+
 </script>
 <script type="text/javascript">
 	(function () {
@@ -220,7 +223,9 @@
 		b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
 		s.parentNode.insertBefore(b, s);
 	})();
+
 </script>
 <noscript> <img height="1" width="1" style="display:none;" alt=""
 		src="https://px.ads.linkedin.com/collect/?pid=955659&fmt=gif" /> </noscript>
+
 </html>

@@ -1,4 +1,7 @@
-import { src, dest } from "gulp";
+import {
+	src,
+	dest
+} from "gulp";
 import sass from "gulp-sass";
 import concat from "gulp-concat";
 import sourcemap from "gulp-sourcemaps";
@@ -9,10 +12,10 @@ import autoprefixer from "autoprefixer";
 
 export const sassTask = () => {
 	return src([
-		"src/components/_core/**.sass",
-		"src/components/_global/**.sass",
-		"src/components/**/**.sass",
-	])
+			"src/components/_core/**.sass",
+			"src/components/_global/**.sass",
+			"src/components/**/**.sass",
+		])
 		.pipe(sourcemap.init())
 		.pipe(concat("upgrade.min.sass"))
 		.pipe(sass().on("error", sass.logError))

@@ -10,12 +10,10 @@
 	"js": [
 		"src/_plugins/_core-js/core.js",
 		"src/_plugins/_core-js/main.js",
-		"src/_plugins/_core-js/Tabslet.js",
-		"bower_components/swiper/dist/js/swiper.min.js"
+		"src/_plugins/_core-js/Tabslet.js"
 	],
 	"css": [
 		"src/_plugins/_core-css/core.css",
-		"src/_plugins/_core-css/main.css",
-		"bower_components/swiper/dist/css/swiper.min.css"
+		"src/_plugins/_core-css/main.css"
 	]
 }

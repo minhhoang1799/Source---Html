@@ -2,23 +2,21 @@ import {
 	src,
 	dest
 } from "gulp";
+import sass from "gulp-sass";
 import concat from "gulp-concat";
-import plumber from "gulp-plumber";
+import sourcemap from "gulp-sourcemaps";
 import cssnano from "cssnano";
 import postcss from "gulp-postcss";
 import cssSort from "css-declaration-sorter";
 import autoprefixer from "autoprefixer";
-import {
-	readFileSync
-} from "graceful-fs";
 
-export const cssCore = () => {
-	let glob = JSON.parse(readFileSync("config.json"))
-	return src(glob.css, {
-			allowEmpty: true
-		})
-		.pipe(plumber())
-		.pipe(concat("core.min.css"))
+export const sassTask = () => {
+	return src([
+			"src/components/_core/**.sass",
+		])
+		.pipe(sourcemap.init())
+		.pipe(concat("upgrade.min.sass"))
+		.pipe(sass().on("error", sass.logError))
 		.pipe(postcss([
 			autoprefixer({
 				browsers: ["last 4 version", "IE 9"],
@@ -29,7 +27,8 @@ export const cssCore = () => {
 				order: "concentric-css",
 			})
 		]))
+		.pipe(sourcemap.write("."))
 		.pipe(dest("dist/css"))
-}
+};
 
-module.exports = cssCore;
+module.exports = sassTask;
