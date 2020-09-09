@@ -1,7 +1,7 @@
 $(document).ready(function () {
-	showFullContent();
-	initSlide();
-	$('.the-workshop-product-2 .tabslet').tabslet()
+	// showFullContent();
+	// initSlide();
+	// $('.the-workshop-product-2 .tabslet').tabslet()
 })
 
 
