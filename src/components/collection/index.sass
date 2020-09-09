@@ -3,9 +3,11 @@
 		margin: 20px 0
 		.image
 			+img-scale(200/285*100%)
+			overflow: hidden
 			img
 				width: 100%
 				height: 100%
+				transition: .2s ease-in-out all
 		.content
 			margin: 10px 0
 			.btn-right
@@ -22,3 +24,7 @@
 						color: #00703c
 						em
 							opacity: 1
+			&:hover 
+				.image
+					img 
+						transform: scale(1.1)

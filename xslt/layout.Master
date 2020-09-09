@@ -22,6 +22,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800&amp;subset=vietnamese"
 		rel="stylesheet">
 	<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body id="Body" runat="server" class="canhcam">
@@ -207,6 +208,7 @@
 	<script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	<script src="/Data/Sites/1/skins/default/js/upgrade.min.js"></script>
 	<script src="/Data/Sites/1/skins/default/js/app.js"></script>
+	<script src="/Data/Sites/1/skins/default/js/custom.js"></script>
 </body>
 <script type="text/javascript">
 	_linkedin_partner_id = "955659";
