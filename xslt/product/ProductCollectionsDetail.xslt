@@ -8,7 +8,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12">
-						<div class="product-detail-page">
+						<div class="product-detail-page-2">
 							<div class="main-product-top">
 								<div class="row">
 									<div class="col-lg-7">
@@ -34,24 +34,26 @@
 							<div class="main-product-bottom">
 								<div class="tabslet" data-toggle="tabslet">
 									<ul class="tabslet-tab">
-										<li class="active"><a href="#tab-1"> Mô tả chi tiết</a></li>
-										<li><a href="#tab-2">Bộ sưu tập</a></li>
-										<li><a href="#tab-3">Lựa chọn khác</a></li>
+										<li class="active"><a href="#tab-1">Description</a></li>
+										<xsl:apply-templates select="ProductAttributes" mode="Tab"/>
+										<li><a href="#tab-98">Collections</a></li>
+										<li><a href="#tab-99">More choices</a></li>
 									</ul> 
 									<div class="tabslet-content active" id="tab-1">
 										<div class="full-content">
 											<xsl:value-of select="FullContent" disable-output-escaping="yes"/>
 										</div>
-										<div class="view-more"><a href="javascript:void(0)">Xem thêm</a></div>
+										<div class="view-more"><a href="javascript:void(0)">View more</a></div>
 									</div>
-									<div class="tabslet-content" id="tab-2">
+										<xsl:apply-templates select="ProductAttributes" mode="Content"/>
+									<div class="tabslet-content" id="tab-98">
 										<div class="row list-item">
-											<xsl:apply-templates select="ProductInCollections"/>
+											<xsl:apply-templates select="ProductOtherInCollections"/>
 										</div>
 									</div>
-									<div class="tabslet-content" id="tab-3">
+									<div class="tabslet-content" id="tab-99">
 										<div class="row list-item"> 
-											<xsl:apply-templates select="ProductOtherInCollections"/>
+											<xsl:apply-templates select="ProductInCollections"/>
 										</div>
 									</div>
 								</div>
@@ -62,7 +64,28 @@
 			</div>
 		</section>
 	</xsl:template>
-
+	<xsl:template match="ProductAttributes" mode="Tab">
+		<li>
+			<a href="#tab-1">
+				<xsl:attribute name="href">
+					<xsl:text>#tab-</xsl:text>
+					<xsl:value-of select="position() + 1"/>
+				</xsl:attribute>
+				<xsl:value-of select="Title" />
+			</a>
+		</li>
+	</xsl:template>
+	<xsl:template match="ProductAttributes" mode="Content">
+		<div class="tabslet-content" >
+				<xsl:attribute name="id">
+					<xsl:text>tab-</xsl:text>
+					<xsl:value-of select="position() + 1"/>
+				</xsl:attribute>
+			<div class="row list-item"> 
+				<xsl:value-of select="Content" disable-output-escaping="yes"/>
+			</div>
+		</div>
+	</xsl:template>
 	<xsl:template match="ProductInCollections" >
 		<div class="col-sm-6 col-md-4">
 			<div class="item">

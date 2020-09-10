@@ -6,7 +6,7 @@
 		<xsl:apply-templates select="Zone[IsActive = 'true'][1]" /> 
   </xsl:template>
   <xsl:template match="Zone" > 
-	<section class="product-list-2 main-section collections-template-list"> 
+	<section class="product-list-2 main-section collections-template-list" style="display:none"> 
 		<div class="container">
 			<h2 class="main-title">
 				<xsl:value-of select="Title"/>
@@ -50,6 +50,9 @@
 					</div>
 				</div>
 				<div class="col-lg-8 col-xl-9">
+					<div class="product-detail-page-1">
+						
+					</div>
 				</div>
 			</div>
 		</div>
@@ -73,20 +76,22 @@
   <xsl:template match="Product">
 	<div class="item">
 		<div class="image">
-			<img src="./img/3.png" alt="">
-	            <xsl:attribute name="alt">
-	              <xsl:value-of select="Title"></xsl:value-of>
-	            </xsl:attribute>
-	            <xsl:attribute name="src">
-	              <xsl:value-of select="ThumbnailUrl"></xsl:value-of>
-	            </xsl:attribute>
-			</img>
+			<a href="#" onclick="CollectionsApp.getCollectionsDetailAndChangeTemplate(this,event);return false;">
+				<img src="./img/3.png" alt="">
+					<xsl:attribute name="alt">
+					<xsl:value-of select="Title"></xsl:value-of>
+					</xsl:attribute>
+					<xsl:attribute name="src">
+					<xsl:value-of select="ThumbnailUrl"></xsl:value-of>
+					</xsl:attribute>
+				</img>
+			 </a>
 		</div>
 		<div class="content">
 			<p class="name-title">
               <xsl:value-of select="Title"></xsl:value-of>
           	</p>
-			<a href="#" onclick="CollectionsApp.getCollectionsDetailAndChangeTemplate(this);return false;">
+			<a href="#" onclick="CollectionsApp.getCollectionsDetailAndChangeTemplate(this,event);return false;">
 	            <xsl:attribute name="data-id">
 	              <xsl:value-of select="ProductId"></xsl:value-of>
 	            </xsl:attribute>
@@ -108,7 +113,7 @@
 <xsl:template match="Product" mode="detail">
 	<div class="product-item">
 		<div class="name"> 
-			<a href="#" onclick="CollectionsApp.getCollectionsDetail(this);return false;">
+			<a href="#" onclick="CollectionsApp.getCollectionsDetail(this,event);return false;">
 	            <xsl:attribute name="data-id">
 	              <xsl:value-of select="ProductId"></xsl:value-of>
 	            </xsl:attribute>
@@ -125,7 +130,7 @@
 	        </a>
 		</div>
 		<div class="image">
-			<a href="#" onclick="CollectionsApp.getCollectionsDetail(this);return false;">
+			<a href="#" onclick="CollectionsApp.getCollectionsDetail(this,event);return false;">
 	            <xsl:attribute name="data-id">
 	              <xsl:value-of select="ProductId"></xsl:value-of>
 	            </xsl:attribute>
@@ -149,7 +154,7 @@
 			</a>
 		</div>
 		<div class="see-detail">
-			<a href="#" onclick="CollectionsApp.getCollectionsDetail(this);return false;">
+			<a href="#" onclick="CollectionsApp.getCollectionsDetail(this,event);return false;">
 	            <xsl:attribute name="data-id">
 	              <xsl:value-of select="ProductId"></xsl:value-of>
 	            </xsl:attribute>
